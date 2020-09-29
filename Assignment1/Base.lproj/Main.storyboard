@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -16,38 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="9tk-rV-PPa" userLabel="Stack View Super">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="9tk-rV-PPa" userLabel="Stack View Super">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="357" translatesAutoresizingMaskIntoConstraints="NO" id="K5X-Ge-arS" userLabel="operation stack">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="116"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K5X-Ge-arS" userLabel="operation stack">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="116"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaU-eT-GAU">
-                                                <rect key="frame" x="0.0" y="37.5" width="18.5" height="41"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="XaU-eT-GAU">
+                                                <rect key="frame" x="0.0" y="37.5" width="311.5" height="41"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
                                                 <color key="textColor" name="calculator text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="right" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" +" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTS-32-8z8">
-                                                <rect key="frame" x="375.5" y="37.5" width="18.5" height="41"/>
+                                                <rect key="frame" x="311.5" y="37.5" width="62.5" height="41"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
                                                 <color key="textColor" name="calculator text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="QTS-32-8z8" firstAttribute="width" secondItem="XaU-eT-GAU" secondAttribute="width" multiplier="0.2" id="XMU-bz-WLk"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="XVi-RB-fEV" userLabel="result display">
-                                        <rect key="frame" x="0.0" y="117" width="399" height="116"/>
+                                        <rect key="frame" x="20" y="117" width="374" height="116"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckJ-Mz-aeo">
-                                                <rect key="frame" x="0.0" y="0.0" width="399" height="116"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXE-L7-eVG">
+                                                <rect key="frame" x="0.0" y="0.0" width="37.5" height="116"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="80"/>
+                                                <color key="textColor" name="calculator text"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckJ-Mz-aeo">
+                                                <rect key="frame" x="37.5" y="0.0" width="336.5" height="116"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="80"/>
                                                 <color key="textColor" name="calculator text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="RXE-L7-eVG" firstAttribute="width" secondItem="XVi-RB-fEV" secondAttribute="width" multiplier="0.1" id="xVJ-M3-bE2"/>
+                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="d6M-Dn-k2w">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="d6M-Dn-k2w" userLabel="first row">
                                         <rect key="frame" x="0.0" y="234" width="414" height="116"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sM8-8T-NiH">
@@ -68,6 +80,9 @@
                                                 <state key="normal" title="±">
                                                     <color key="titleColor" name="calculator text"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F0q-t3-kYm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1u-ua-aUK">
                                                 <rect key="frame" x="207.5" y="0.0" width="103" height="116"/>
@@ -93,7 +108,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fv5-Cu-wcG">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fv5-Cu-wcG" userLabel="second row">
                                         <rect key="frame" x="0.0" y="351" width="414" height="116"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69y-Bs-jyS">
@@ -142,7 +157,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yoc-cp-o9n">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yoc-cp-o9n" userLabel="third row">
                                         <rect key="frame" x="0.0" y="468" width="414" height="116"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GnK-hk-Egc">
@@ -191,7 +206,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="snF-ep-zyL">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="snF-ep-zyL" userLabel="fourth row">
                                         <rect key="frame" x="0.0" y="585" width="414" height="116"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEP-oM-4Bl">
@@ -240,7 +255,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Wj-S8-BLe">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Wj-S8-BLe" userLabel="fifth row">
                                         <rect key="frame" x="0.0" y="702" width="414" height="116"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O97-LY-4g4">
@@ -282,18 +297,19 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="d6M-Dn-k2w" secondAttribute="trailing" id="0BJ-Za-aIJ"/>
+                                    <constraint firstItem="K5X-Ge-arS" firstAttribute="leading" secondItem="9tk-rV-PPa" secondAttribute="leading" constant="20" id="7Jc-JP-CwN"/>
+                                    <constraint firstAttribute="trailing" secondItem="XVi-RB-fEV" secondAttribute="trailing" constant="20" id="7er-AK-Fg6"/>
                                     <constraint firstItem="6Wj-S8-BLe" firstAttribute="leading" secondItem="9tk-rV-PPa" secondAttribute="leading" id="F34-EH-4un"/>
-                                    <constraint firstItem="XVi-RB-fEV" firstAttribute="leading" secondItem="9tk-rV-PPa" secondAttribute="leading" id="OVi-ae-3fN"/>
                                     <constraint firstAttribute="trailing" secondItem="snF-ep-zyL" secondAttribute="trailing" id="Sbu-jI-g8V"/>
                                     <constraint firstAttribute="trailing" secondItem="6Wj-S8-BLe" secondAttribute="trailing" id="cgd-re-f0D"/>
                                     <constraint firstAttribute="trailing" secondItem="Fv5-Cu-wcG" secondAttribute="trailing" id="gqH-Qn-zJy"/>
                                     <constraint firstItem="Yoc-cp-o9n" firstAttribute="leading" secondItem="9tk-rV-PPa" secondAttribute="leading" id="hm0-5Y-yMt"/>
+                                    <constraint firstItem="XVi-RB-fEV" firstAttribute="leading" secondItem="9tk-rV-PPa" secondAttribute="leading" constant="20" id="mf5-P0-Dk9"/>
                                     <constraint firstItem="d6M-Dn-k2w" firstAttribute="leading" secondItem="9tk-rV-PPa" secondAttribute="leading" id="n4B-Ny-num"/>
                                     <constraint firstItem="snF-ep-zyL" firstAttribute="leading" secondItem="9tk-rV-PPa" secondAttribute="leading" id="oUH-4E-k98"/>
                                     <constraint firstItem="Fv5-Cu-wcG" firstAttribute="leading" secondItem="9tk-rV-PPa" secondAttribute="leading" id="obY-SJ-DV4"/>
-                                    <constraint firstAttribute="trailing" secondItem="XVi-RB-fEV" secondAttribute="trailing" constant="15" id="qpI-mG-zF9"/>
+                                    <constraint firstAttribute="trailing" secondItem="K5X-Ge-arS" secondAttribute="trailing" constant="20" id="rLo-cq-lh7"/>
                                     <constraint firstAttribute="trailing" secondItem="Yoc-cp-o9n" secondAttribute="trailing" id="yhO-bt-pLY"/>
-                                    <constraint firstAttribute="trailing" secondItem="K5X-Ge-arS" secondAttribute="trailing" constant="20" id="zhP-ob-xp9"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -303,15 +319,14 @@
                             <constraint firstItem="9tk-rV-PPa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JYE-15-lpY"/>
                             <constraint firstAttribute="trailing" secondItem="9tk-rV-PPa" secondAttribute="trailing" id="JoG-tX-jAt"/>
                             <constraint firstItem="9tk-rV-PPa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UmD-Cu-InA"/>
-                            <constraint firstItem="9tk-rV-PPa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V5I-TN-Ay0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9tk-rV-PPa" secondAttribute="bottom" id="sbt-yO-7Di"/>
-                            <constraint firstAttribute="trailing" secondItem="9tk-rV-PPa" secondAttribute="trailing" id="wNa-DO-Bqv"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="operandLabel" destination="QTS-32-8z8" id="sRa-MJ-zHV"/>
                         <outlet property="previousLabel" destination="XaU-eT-GAU" id="mNO-sL-dIO"/>
                         <outlet property="resultLabel" destination="ckJ-Mz-aeo" id="737-Vo-2xz"/>
+                        <outlet property="signLabel" destination="RXE-L7-eVG" id="ivo-QQ-Wp5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
