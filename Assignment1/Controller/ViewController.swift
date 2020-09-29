@@ -9,23 +9,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var signLabel: UILabel!
+    //MARK: - variables
+    
     @IBOutlet weak var operandLabel: UILabel!
     @IBOutlet weak var previousLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     var isNegative = false
-    
+        
+    //MARK: - UI
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        operandLabel.text = nil
-        signLabel.text = nil
-        previousLabel.text = nil
+        updateUI()
     }
-
+    func updateUI(){
+        resultLabel.text = "0"
+        operandLabel.text = nil
+        previousLabel.text = nil
+        isNegative = false
+    }
+    //MARK: - button UI functions
+    
     @IBAction func digitPressed(_ sender: UIButton) {
         if resultLabel.text! == "0"{
             resultLabel.text = sender.currentTitle!
+        }
+        else if resultLabel.text! == "-0"{
+            resultLabel.text = "-\(sender.currentTitle!)"
         }
         else{
             resultLabel.text?.append(sender.currentTitle!)
@@ -33,16 +43,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func acPressed(_ sender: UIButton) {
-        resultLabel.text = "0"
-        operandLabel.text = nil
-        previousLabel.text = nil
-        signLabel.text = nil
+        updateUI()
+    }
+    
+    @IBAction func clearPressed(_ sender: UIButton) {
+        if resultLabel.text != "0"{
+            resultLabel.text!.removeLast()
+        }
     }
     
     @IBAction func operandPressed(_ sender: UIButton) {
         operandLabel.text = sender.currentTitle!
         previousLabel.text = resultLabel.text!
         resultLabel.text = "0"
+        isNegative = false
     }
     
     @IBAction func decimalPressed(_ sender: UIButton) {
@@ -56,10 +70,10 @@ class ViewController: UIViewController {
     @IBAction func signPressed(_ sender: UIButton) {
         isNegative.toggle()
         if isNegative {
-            signLabel.text = "-"
+            resultLabel.text!.insert("-",at: resultLabel.text!.startIndex)
         }
         else{
-            signLabel.text = nil
+            resultLabel.text!.removeFirst()
         }
     }
     

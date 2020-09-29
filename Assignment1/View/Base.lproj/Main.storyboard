@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -42,21 +42,15 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="XVi-RB-fEV" userLabel="result display">
                                         <rect key="frame" x="20" y="117" width="374" height="116"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXE-L7-eVG">
-                                                <rect key="frame" x="0.0" y="0.0" width="37.5" height="116"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="80"/>
-                                                <color key="textColor" name="calculator text"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckJ-Mz-aeo">
-                                                <rect key="frame" x="37.5" y="0.0" width="336.5" height="116"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ckJ-Mz-aeo">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="116"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="80"/>
                                                 <color key="textColor" name="calculator text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="RXE-L7-eVG" firstAttribute="width" secondItem="XVi-RB-fEV" secondAttribute="width" multiplier="0.1" id="xVJ-M3-bE2"/>
+                                            <constraint firstItem="ckJ-Mz-aeo" firstAttribute="leading" secondItem="XVi-RB-fEV" secondAttribute="leading" id="Kcd-SM-ewG"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="d6M-Dn-k2w" userLabel="first row">
@@ -73,19 +67,8 @@
                                                     <action selector="operandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jyd-YB-Dly"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpl-iM-kMx">
-                                                <rect key="frame" x="104" y="0.0" width="102.5" height="116"/>
-                                                <color key="backgroundColor" name="calculator button operands"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
-                                                <state key="normal" title="±">
-                                                    <color key="titleColor" name="calculator text"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="signPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F0q-t3-kYm"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1u-ua-aUK">
-                                                <rect key="frame" x="207.5" y="0.0" width="103" height="116"/>
+                                                <rect key="frame" x="104" y="0.0" width="102.5" height="116"/>
                                                 <color key="backgroundColor" name="calculator button operands"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
                                                 <state key="normal" title="AC">
@@ -93,6 +76,17 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="acPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KCZ-MF-cmM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpl-iM-kMx">
+                                                <rect key="frame" x="207.5" y="0.0" width="103" height="116"/>
+                                                <color key="backgroundColor" name="calculator button operands"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <state key="normal" title="⌫">
+                                                    <color key="titleColor" name="calculator text"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sEW-ew-rgc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjw-y9-KV1">
@@ -255,11 +249,22 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Wj-S8-BLe" userLabel="fifth row">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Wj-S8-BLe" userLabel="fifth row">
                                         <rect key="frame" x="0.0" y="702" width="414" height="116"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIl-9b-l1c">
+                                                <rect key="frame" x="0.0" y="0.0" width="103" height="116"/>
+                                                <color key="backgroundColor" name="calculator button"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <state key="normal" title="±">
+                                                    <color key="titleColor" name="calculator text"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="signPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJl-zr-POK"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O97-LY-4g4">
-                                                <rect key="frame" x="0.0" y="0.0" width="206" height="116"/>
+                                                <rect key="frame" x="104" y="0.0" width="102.5" height="116"/>
                                                 <color key="backgroundColor" name="calculator button"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
                                                 <state key="normal" title="0">
@@ -270,7 +275,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdc-3P-nhw">
-                                                <rect key="frame" x="207" y="0.0" width="103" height="116"/>
+                                                <rect key="frame" x="207.5" y="0.0" width="103" height="116"/>
                                                 <color key="backgroundColor" name="calculator button"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
                                                 <state key="normal" title=".">
@@ -281,7 +286,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOa-fW-V3y">
-                                                <rect key="frame" x="311" y="0.0" width="103" height="116"/>
+                                                <rect key="frame" x="311.5" y="0.0" width="102.5" height="116"/>
                                                 <color key="backgroundColor" name="calculator button operands"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
                                                 <state key="normal" title="=">
@@ -289,10 +294,6 @@
                                                 </state>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="mdc-3P-nhw" firstAttribute="width" secondItem="O97-LY-4g4" secondAttribute="width" multiplier="0.5" id="1xi-13-vyR"/>
-                                            <constraint firstItem="FOa-fW-V3y" firstAttribute="width" secondItem="O97-LY-4g4" secondAttribute="width" multiplier="0.5" id="VfX-55-8Wd"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -326,7 +327,6 @@
                         <outlet property="operandLabel" destination="QTS-32-8z8" id="sRa-MJ-zHV"/>
                         <outlet property="previousLabel" destination="XaU-eT-GAU" id="mNO-sL-dIO"/>
                         <outlet property="resultLabel" destination="ckJ-Mz-aeo" id="737-Vo-2xz"/>
-                        <outlet property="signLabel" destination="RXE-L7-eVG" id="ivo-QQ-Wp5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -339,13 +339,13 @@
             <color red="0.75400000810623169" green="0.75400000810623169" blue="0.75400000810623169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="calculator button">
-            <color red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.5899999737739563" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="calculator button operands">
-            <color red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.57800000905990601" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="calculator text">
-            <color red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12999999523162842" green="0.12999999523162842" blue="0.12999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
