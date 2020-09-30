@@ -56,48 +56,60 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="d6M-Dn-k2w" userLabel="first row">
                                         <rect key="frame" x="0.0" y="234" width="412" height="116"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sM8-8T-NiH">
-                                                <rect key="frame" x="0.0" y="0.0" width="102.5" height="116"/>
-                                                <color key="backgroundColor" name="calculator button operands"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
-                                                <state key="normal" title="%">
-                                                    <color key="titleColor" name="calculator text"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="operandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jyd-YB-Dly"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1u-ua-aUK">
-                                                <rect key="frame" x="103.5" y="0.0" width="102" height="116"/>
-                                                <color key="backgroundColor" name="calculator button operands"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="102.5" height="116"/>
+                                                <color key="backgroundColor" name="calculator button extra"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="AC">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="acPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KCZ-MF-cmM"/>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7S-JY-WxF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpl-iM-kMx">
-                                                <rect key="frame" x="206.5" y="0.0" width="102.5" height="116"/>
-                                                <color key="backgroundColor" name="calculator button operands"/>
+                                                <rect key="frame" x="103.5" y="0.0" width="102" height="116"/>
+                                                <color key="backgroundColor" name="calculator button extra"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="60"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="⌫">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HJ7-Sa-nLw"/>
                                                     <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sEW-ew-rgc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sM8-8T-NiH">
+                                                <rect key="frame" x="206.5" y="0.0" width="102.5" height="116"/>
+                                                <color key="backgroundColor" name="calculator button operators"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
+                                                <state key="normal" title="%">
+                                                    <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HIK-Nv-LsZ"/>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jyd-YB-Dly"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjw-y9-KV1">
                                                 <rect key="frame" x="310" y="0.0" width="102" height="116"/>
-                                                <color key="backgroundColor" name="calculator button operands"/>
+                                                <color key="backgroundColor" name="calculator button operators"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="÷">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="operandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MjF-2k-5K4"/>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CQ1-5l-dNY"/>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MjF-2k-5K4"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -107,46 +119,58 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69y-Bs-jyS">
                                                 <rect key="frame" x="0.0" y="0.0" width="102.5" height="116"/>
-                                                <color key="backgroundColor" name="Calculator Button"/>
+                                                <color key="backgroundColor" name="calculator button"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="7">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K4v-D4-edg"/>
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Bh-iT-k8X"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doV-mL-hA3">
                                                 <rect key="frame" x="103.5" y="0.0" width="102" height="116"/>
-                                                <color key="backgroundColor" name="Calculator Button"/>
+                                                <color key="backgroundColor" name="calculator button"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="8">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jrc-wp-1X6"/>
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZYn-mJ-W0A"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zki-mn-5Zn">
                                                 <rect key="frame" x="206.5" y="0.0" width="102.5" height="116"/>
-                                                <color key="backgroundColor" name="Calculator Button"/>
+                                                <color key="backgroundColor" name="calculator button"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="9">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OM7-gx-41E"/>
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fyn-qZ-5yP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8n-sa-eci">
                                                 <rect key="frame" x="310" y="0.0" width="102" height="116"/>
-                                                <color key="backgroundColor" name="calculator button operands"/>
+                                                <color key="backgroundColor" name="calculator button operators"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="×">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="operandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o2N-vg-uoD"/>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1at-gY-KKL"/>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o2N-vg-uoD"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -156,46 +180,58 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GnK-hk-Egc">
                                                 <rect key="frame" x="0.0" y="0.0" width="102.5" height="116"/>
-                                                <color key="backgroundColor" name="Calculator Button"/>
+                                                <color key="backgroundColor" name="calculator button"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="4">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1p-O8-iq8"/>
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fzu-ik-3Cj"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db9-YY-5YY">
                                                 <rect key="frame" x="103.5" y="0.0" width="102" height="116"/>
-                                                <color key="backgroundColor" name="Calculator Button"/>
+                                                <color key="backgroundColor" name="calculator button"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="5">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jIL-eE-bJi"/>
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q57-1g-1fw"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twb-yj-2aw">
                                                 <rect key="frame" x="206.5" y="0.0" width="102.5" height="116"/>
-                                                <color key="backgroundColor" name="Calculator Button"/>
+                                                <color key="backgroundColor" name="calculator button"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="6">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuD-6M-ko1"/>
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wvc-Ky-ar1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoK-K2-82K">
                                                 <rect key="frame" x="310" y="0.0" width="102" height="116"/>
-                                                <color key="backgroundColor" name="calculator button operands"/>
+                                                <color key="backgroundColor" name="calculator button operators"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="-">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="operandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xl8-5d-e0r"/>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WMN-p4-wow"/>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xl8-5d-e0r"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -205,46 +241,58 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEP-oM-4Bl">
                                                 <rect key="frame" x="0.0" y="0.0" width="102.5" height="116"/>
-                                                <color key="backgroundColor" name="Calculator Button"/>
+                                                <color key="backgroundColor" name="calculator button"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="1">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8VU-Lr-prl"/>
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnI-ze-5nq"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5e-OO-jJi">
                                                 <rect key="frame" x="103.5" y="0.0" width="102" height="116"/>
-                                                <color key="backgroundColor" name="Calculator Button"/>
+                                                <color key="backgroundColor" name="calculator button"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="2">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k9X-Qd-PFe"/>
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SYZ-PR-5tg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7d-Eu-UVx">
                                                 <rect key="frame" x="206.5" y="0.0" width="102.5" height="116"/>
-                                                <color key="backgroundColor" name="Calculator Button"/>
+                                                <color key="backgroundColor" name="calculator button"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="3">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jDT-Qw-Rge"/>
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iio-ju-dzv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2l-te-Fj6">
                                                 <rect key="frame" x="310" y="0.0" width="102" height="116"/>
-                                                <color key="backgroundColor" name="calculator button operands"/>
+                                                <color key="backgroundColor" name="calculator button operators"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="+">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="operandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CHE-xn-Ywl"/>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8EK-rj-2Ks"/>
+                                                    <action selector="operatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CHE-xn-Ywl"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -254,44 +302,58 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIl-9b-l1c">
                                                 <rect key="frame" x="0.0" y="0.0" width="102.5" height="116"/>
-                                                <color key="backgroundColor" name="Calculator Button"/>
+                                                <color key="backgroundColor" name="calculator button extra"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="±">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iPb-mc-YUs"/>
                                                     <action selector="signPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJl-zr-POK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O97-LY-4g4">
                                                 <rect key="frame" x="103.5" y="0.0" width="102" height="116"/>
-                                                <color key="backgroundColor" name="Calculator Button"/>
+                                                <color key="backgroundColor" name="calculator button"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="0">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5NR-Ni-4QI"/>
                                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vZe-8O-qm6"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdc-3P-nhw">
                                                 <rect key="frame" x="206.5" y="0.0" width="102.5" height="116"/>
-                                                <color key="backgroundColor" name="Calculator Button"/>
+                                                <color key="backgroundColor" name="calculator button extra"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title=".">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u4Y-o7-y5c"/>
                                                     <action selector="decimalPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h23-Ox-2Jn"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOa-fW-V3y">
                                                 <rect key="frame" x="310" y="0.0" width="102" height="116"/>
-                                                <color key="backgroundColor" name="calculator button operands"/>
+                                                <color key="backgroundColor" name="calculator button operators"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="=">
                                                     <color key="titleColor" name="calculator text"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJK-X9-Ai6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -324,7 +386,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="operandLabel" destination="QTS-32-8z8" id="sRa-MJ-zHV"/>
+                        <outlet property="operatorLabel" destination="QTS-32-8z8" id="sRa-MJ-zHV"/>
                         <outlet property="previousLabel" destination="XaU-eT-GAU" id="mNO-sL-dIO"/>
                         <outlet property="resultLabel" destination="ckJ-Mz-aeo" id="737-Vo-2xz"/>
                     </connections>
@@ -335,17 +397,20 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="Calculator Button">
-            <color red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="calculator background">
-            <color red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.19215686274509802" green="0.20000000000000001" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="calculator button operands">
-            <color red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="calculator button">
+            <color red="0.24705882352941178" green="0.56862745098039214" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="calculator button extra">
+            <color red="0.5725490196078431" green="0.83137254901960778" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="calculator button operators">
+            <color red="0.94901960784313721" green="0.53333333333333333" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="calculator text">
-            <color red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
