@@ -70,18 +70,18 @@
                                                     <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7S-JY-WxF"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpl-iM-kMx">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIl-9b-l1c">
                                                 <rect key="frame" x="103.5" y="0.0" width="102" height="116"/>
                                                 <color key="backgroundColor" name="calculator button extra"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="60"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
                                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                                <state key="normal" title="⌫">
+                                                <state key="normal" title="±">
                                                     <color key="titleColor" name="calculator text"/>
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HJ7-Sa-nLw"/>
-                                                    <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sEW-ew-rgc"/>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iPb-mc-YUs"/>
+                                                    <action selector="signPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJl-zr-POK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sM8-8T-NiH">
@@ -300,18 +300,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Wj-S8-BLe" userLabel="fifth row">
                                         <rect key="frame" x="0.0" y="702" width="412" height="116"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIl-9b-l1c">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpl-iM-kMx">
                                                 <rect key="frame" x="0.0" y="0.0" width="102.5" height="116"/>
                                                 <color key="backgroundColor" name="calculator button extra"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="60"/>
                                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                                <state key="normal" title="±">
+                                                <state key="normal" title="⌫">
                                                     <color key="titleColor" name="calculator text"/>
                                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iPb-mc-YUs"/>
-                                                    <action selector="signPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJl-zr-POK"/>
+                                                    <action selector="buttonFlash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HJ7-Sa-nLw"/>
+                                                    <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sEW-ew-rgc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O97-LY-4g4">
