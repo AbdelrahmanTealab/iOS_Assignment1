@@ -104,7 +104,7 @@ class ViewController: UIViewController {
         resultLabel.text = "0"
         isNegative = false
         
-        //switch case to trigger calculator equation functions for later development
+        //the below switch statement is to enable sequence calculations by pressing operators
         switch operatorSymbol {
         case "÷":
             print(operatorSymbol)
@@ -131,6 +131,8 @@ class ViewController: UIViewController {
         operatorLabel.text = sender.currentTitle!
     }
     
+    //when equal is pressed, the previous label and operator label will passed on as arguments to
+    //the function related to the operator on the screen
     @IBAction func equalPressed(_ sender: UIButton) {
         let previous = previousLabel.text!
         let current = resultLabel.text!
