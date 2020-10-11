@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Assignment1
 //
-//  Created by Abdelrahman  Tealab on 2020-09-22.
+//  Created by Abdelrahman  Tealab (ID: 301164103) on 2020-09-22.
 //
 
 import UIKit
@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var previousLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     var isNegative = false
+    var calculator = Calculator()
         
     //MARK: - UI
 
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
     func updateUI(){
         resultLabel.text = "0"
         operatorLabel.text = nil
-        previousLabel.text = nil
+        previousLabel.text = "0"
         isNegative = false
     }
     
@@ -83,8 +84,10 @@ class ViewController: UIViewController {
     //also whatever number in the resultLabel will be sent to the previousLabel display
     @IBAction func operatorPressed(_ sender: UIButton) {
         
-        let operatorSymbol = sender.currentTitle!
-        operatorLabel.text = operatorSymbol
+        let previous = previousLabel.text!
+        let current = resultLabel.text!
+        
+        let operatorSymbol = operatorLabel.text ?? "+"
         
         //checking whether the number ends with a dot or not in order to keep the string clean
         if resultLabel.text!.hasSuffix(".") {
@@ -105,17 +108,60 @@ class ViewController: UIViewController {
         switch operatorSymbol {
         case "÷":
             print(operatorSymbol)
+            previousLabel.text = calculator.division(digit1: Float(previous), digit2: Float(current))
         case "×":
             print(operatorSymbol)
+            previousLabel.text = calculator.multiplication(digit1: Float(previous), digit2: Float(current))
+
         case "-":
             print(operatorSymbol)
+            previousLabel.text = calculator.subtraction(digit1: Float(previous), digit2: Float(current))
+
         case "+":
             print(operatorSymbol)
+            previousLabel.text = calculator.addition(digit1: Float(previous), digit2: Float(current))
+
         case "%":
             print(operatorSymbol)
+            previousLabel.text = calculator.percentage(digit1: Float(previous), digit2: Float(current))
+
         default:
             print(sender.currentTitle!)
         }
+        operatorLabel.text = sender.currentTitle!
+    }
+    
+    @IBAction func equalPressed(_ sender: UIButton) {
+        let previous = previousLabel.text!
+        let current = resultLabel.text!
+        let operatorSymbol = operatorLabel.text ?? "+"
+
+        switch operatorSymbol {
+        case "÷":
+            print(operatorSymbol)
+            previousLabel.text = calculator.division(digit1: Float(previous), digit2: Float(current))
+        case "×":
+            print(operatorSymbol)
+            previousLabel.text = calculator.multiplication(digit1: Float(previous), digit2: Float(current))
+
+        case "-":
+            print(operatorSymbol)
+            previousLabel.text = calculator.subtraction(digit1: Float(previous), digit2: Float(current))
+
+        case "+":
+            print(operatorSymbol)
+            previousLabel.text = calculator.addition(digit1: Float(previous), digit2: Float(current))
+
+        case "%":
+            print(operatorSymbol)
+            previousLabel.text = calculator.percentage(digit1: Float(previous), digit2: Float(current))
+
+        default:
+            print(sender.currentTitle!)
+        }
+        resultLabel.text = "0"
+        operatorLabel.text = nil
+        isNegative = false
     }
     
     //When the point button is pressed, it will add a "." to the string
